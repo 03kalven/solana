@@ -7,7 +7,7 @@ pub mod instructions;
 pub mod pubkey;
 pub mod system_instruction;
 
-/// Initialize Javascript logging and panic handler
+// Initialize Javascript logging and panic handler
 // #[wasm_bindgen]
 // pub fn solana_program_init() {
 //     use std::sync::Once;
