@@ -2,7 +2,7 @@
 
 #![allow(clippy::integer_arithmetic)]
 use {
-    crate::{decode_error::DecodeError, hash::hashv, wasm_bindgen},
+    crate::{decode_error::DecodeError, hash::hashv},
     borsh::{BorshDeserialize, BorshSchema, BorshSerialize},
     bytemuck::{Pod, Zeroable},
     num_derive::{FromPrimitive, ToPrimitive},
@@ -64,7 +64,7 @@ impl From<u64> for PubkeyError {
 /// [ed25519]: https://ed25519.cr.yp.to/
 /// [pdas]: https://docs.solana.com/developing/programming-model/calling-between-programs#program-derived-addresses
 /// [`Keypair`]: https://docs.rs/solana-sdk/latest/solana_sdk/signer/keypair/struct.Keypair.html
-#[wasm_bindgen]
+// // #[wasm_bindgen]
 #[repr(transparent)]
 #[derive(
     AbiExample,

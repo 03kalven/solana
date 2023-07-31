@@ -387,7 +387,7 @@ pub fn wasm_bindgen_stub(_attr: TokenStream, item: TokenStream) -> TokenStream {
     match parse_macro_input!(item as syn::Item) {
         syn::Item::Struct(mut item_struct) => {
             if let syn::Fields::Named(fields) = &mut item_struct.fields {
-                // Strip out any `#[wasm_bindgen]` added to struct fields. This is custom
+                // Strip out any `// #[wasm_bindgen]` added to struct fields. This is custom
                 // syntax supplied by the normal `wasm_bindgen` macro.
                 for field in fields.named.iter_mut() {
                     field.attrs.retain(|attr| {

@@ -1,5 +1,5 @@
 //! `Transaction` Javascript interface
-#![cfg(target_arch = "wasm32")]
+// #![cfg(target_arch = "wasm32")]
 #![allow(non_snake_case)]
 use {
     crate::{hash::Hash, message::Message, signer::keypair::Keypair, transaction::Transaction},
@@ -7,20 +7,20 @@ use {
         pubkey::Pubkey,
         wasm::{display_to_jsvalue, instructions::Instructions},
     },
-    wasm_bindgen::prelude::*,
+    // wasm_bindgen::prelude::*,
 };
 
-#[wasm_bindgen]
+// #[wasm_bindgen]
 impl Transaction {
     /// Create a new `Transaction`
-    #[wasm_bindgen(constructor)]
+    // #[wasm_bindgen(constructor)]
     pub fn constructor(instructions: Instructions, payer: Option<Pubkey>) -> Transaction {
         let instructions: Vec<_> = instructions.into();
         Transaction::new_with_payer(&instructions, payer.as_ref())
     }
 
     /// Return a message containing all data that should be signed.
-    #[wasm_bindgen(js_name = message)]
+    // #[wasm_bindgen(js_name = message)]
     pub fn js_message(&self) -> Message {
         self.message.clone()
     }
@@ -31,7 +31,7 @@ impl Transaction {
     }
 
     /// Verify the transaction
-    #[wasm_bindgen(js_name = verify)]
+    // #[wasm_bindgen(js_name = verify)]
     pub fn js_verify(&self) -> Result<(), JsValue> {
         self.verify().map_err(display_to_jsvalue)
     }

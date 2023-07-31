@@ -59,10 +59,10 @@ zeroize = { workspace = true, features = ["default", "zeroize_derive"] }
 solana-logger = { workspace = true }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-console_error_panic_hook = { workspace = true }
-console_log = { workspace = true }
-js-sys = { workspace = true }
-getrandom = { version = "0.2", features = ["js", "wasm-bindgen"] }
+# console_error_panic_hook = { workspace = true }
+# console_log = { workspace = true }
+# js-sys = { workspace = true }
+getrandom = { version = "0.2", features = ["js"] }
 
 [target.'cfg(not(target_pointer_width = "64"))'.dependencies]
 parking_lot = { workspace = true }

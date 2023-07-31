@@ -1,5 +1,5 @@
 //! `Pubkey` Javascript interface
-#![cfg(target_arch = "wasm32")]
+// #![cfg(target_arch = "wasm32")]
 #![allow(non_snake_case)]
 use {
     crate::{pubkey::*, wasm::display_to_jsvalue},
@@ -24,12 +24,12 @@ fn js_value_to_seeds_vec(array_of_uint8_arrays: &[JsValue]) -> Result<Vec<Vec<u8
     }
 }
 
-#[wasm_bindgen]
+// #[wasm_bindgen]
 impl Pubkey {
     /// Create a new Pubkey object
     ///
     /// * `value` - optional public key as a base58 encoded string, `Uint8Array`, `[number]`
-    #[wasm_bindgen(constructor)]
+    // #[wasm_bindgen(constructor)]
     pub fn constructor(value: JsValue) -> Result<Pubkey, JsValue> {
         if let Some(base58_str) = value.as_string() {
             base58_str.parse::<Pubkey>().map_err(display_to_jsvalue)

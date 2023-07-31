@@ -1,12 +1,12 @@
 //! `SystemInstruction` Javascript interface
-#![cfg(target_arch = "wasm32")]
+// #![cfg(target_arch = "wasm32")]
 #![allow(non_snake_case)]
 use {
     crate::{instruction::Instruction, pubkey::Pubkey, system_instruction::*},
-    wasm_bindgen::prelude::*,
+    // wasm_bindgen::prelude::*,
 };
 
-#[wasm_bindgen]
+// #[wasm_bindgen]
 impl SystemInstruction {
     pub fn createAccount(
         from_pubkey: &Pubkey,

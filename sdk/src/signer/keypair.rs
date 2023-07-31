@@ -20,7 +20,7 @@ use {
 };
 
 /// A vanilla Ed25519 key pair
-#[wasm_bindgen]
+// #[wasm_bindgen]
 #[derive(Debug)]
 pub struct Keypair(ed25519_dalek::Keypair);
 

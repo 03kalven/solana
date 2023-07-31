@@ -6349,12 +6349,9 @@ dependencies = [
  "bv",
  "bytemuck",
  "cc",
- "console_error_panic_hook",
- "console_log",
  "curve25519-dalek",
  "getrandom 0.2.8",
  "itertools",
- "js-sys",
  "lazy_static",
  "libc",
  "libsecp256k1",
@@ -6817,7 +6814,6 @@ dependencies = [
  "hex",
  "hmac 0.12.1",
  "itertools",
- "js-sys",
  "lazy_static",
  "libsecp256k1",
  "log",
@@ -6847,7 +6843,6 @@ dependencies = [
  "thiserror",
  "tiny-bip39",
  "uriparse",
- "wasm-bindgen",
 ]
 
 [[package]]

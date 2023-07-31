@@ -1,5 +1,5 @@
 //! `Keypair` Javascript interface
-#![cfg(target_arch = "wasm32")]
+// #![cfg(target_arch = "wasm32")]
 #![allow(non_snake_case)]
 use {
     crate::signer::{keypair::Keypair, Signer},
@@ -7,10 +7,10 @@ use {
     wasm_bindgen::prelude::*,
 };
 
-#[wasm_bindgen]
+// #[wasm_bindgen]
 impl Keypair {
     /// Create a new `Keypair `
-    #[wasm_bindgen(constructor)]
+    // #[wasm_bindgen(constructor)]
     pub fn constructor() -> Keypair {
         Keypair::new()
     }
@@ -26,7 +26,7 @@ impl Keypair {
     }
 
     /// Return the `Pubkey` for this `Keypair`
-    #[wasm_bindgen(js_name = pubkey)]
+    // #[wasm_bindgen(js_name = pubkey)]
     pub fn js_pubkey(&self) -> Pubkey {
         // `wasm_bindgen` does not support traits (`Signer) yet
         self.pubkey()
