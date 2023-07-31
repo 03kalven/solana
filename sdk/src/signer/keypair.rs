@@ -16,7 +16,7 @@ use {
         io::{Read, Write},
         path::Path,
     },
-    wasm_bindgen::prelude::*,
+    // wasm_bindgen::prelude::*,
 };
 
 /// A vanilla Ed25519 key pair
