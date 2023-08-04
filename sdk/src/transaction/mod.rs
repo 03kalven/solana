@@ -124,7 +124,6 @@ use {
         short_vec,
         signature::{Signature, SignerError},
         signers::Signers,
-        wasm_bindgen,
     },
     serde::Serialize,
     solana_program::{system_instruction::SystemInstruction, system_program},

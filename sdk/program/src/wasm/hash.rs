@@ -1,11 +1,11 @@
 //! `Hash` Javascript interface
 // #![cfg(target_arch = "wasm32")]
-#![allow(non_snake_case)]
-use {
-    crate::{hash::*, wasm::display_to_jsvalue},
-    js_sys::{Array, Uint8Array},
-    wasm_bindgen::{prelude::*, JsCast},
-};
+// #![allow(non_snake_case)]
+// use {
+//     crate::{hash::*, wasm::display_to_jsvalue},
+//     js_sys::{Array, Uint8Array},
+//     wasm_bindgen::{prelude::*, JsCast},
+// };
 
 // #[wasm_bindgen]
 // impl Hash {

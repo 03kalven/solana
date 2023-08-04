@@ -6378,7 +6378,6 @@ dependencies = [
  "static_assertions",
  "thiserror",
  "tiny-bip39",
- "wasm-bindgen",
  "zeroize",
 ]
 
