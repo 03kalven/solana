@@ -74,7 +74,7 @@ serde_json = { workspace = true }
 static_assertions = { workspace = true }
 
 [build-dependencies]
-cc = { workspace = true, features = ["jobserver", "parallel"] }
+# cc = { workspace = true, features = ["jobserver", "parallel"] }
 rustc_version = { workspace = true }
 
 [package.metadata.docs.rs]
